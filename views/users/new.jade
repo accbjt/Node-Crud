@@ -1,0 +1,23 @@
+doctype html
+html
+
+h1 Coding House Forum
+
+form(method="post", action="/users")
+    p Title:
+        input#title(type="text", name="title")
+    p Name:
+        input#name(type="text", name="name")
+    p Date:
+        input#date(type="text", name="date")
+    p Content:
+        textarea#content(name="content", cols="120", rows= "30")
+    p Replies:
+        input#replies(type="text", name="replies")
+    p Views:
+        input#views(type="text", name="views")
+    p Message:
+        input#message(type="text", name="message")
+    p Message Date:
+        input#messagedate(type="text", name="messagedate")
+    p: button(type"submit") Create

@@ -1,0 +1,32 @@
+doctype html
+html
+h1 Forum
+table(border="1px")
+    tr
+        th(width="100px")
+        th(width="600px", align="left") Title
+        th(width="100px") Start Date
+        th(width="150px", align="left") Replies
+        th(width="100px", align="right") Views
+        th(width="200px", align="right") Last Message
+
+        each user in users
+            tr(height="100px")
+                td
+                td
+                    a(href="/users/#{user.name}") #{user.title}
+                    br
+                    | #{user.name}, #{user.date}
+                td
+                td
+                    | Replies:
+                    br
+                    | Views:
+                td(align="right")
+                    | #{user.replies}
+                    br
+                    | #{user.views}
+                td(align="right")
+                    | #{user.message}
+                    br
+                    | #{user.messagedate}

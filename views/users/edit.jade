@@ -1,0 +1,24 @@
+doctype html
+html
+
+h1 Edit User
+
+form(method="POST", action="/users/#{user.name}")
+    p Title:
+        input#title(type="text", name="title" value="#{user.title}")
+        p Name:
+            input#name(type="text", name="name", value="#{user.name}")
+        p Date:
+            input#date(type="text", name="date", value="#{user.date}")
+        p Content:
+            textarea#content(type="text", name="content", cols="120", rows= "30", value="#{user.content}") #{user.content}
+        p Replies:
+            input#replies(type="text", name="replies", value="#{user.replies}")
+        p Views:
+            input#views(type="text", name="views", value="#{user.views}")
+        p Message:
+            input#message(type="text", name="message", value="#{user.message}")
+        p Message Date:
+            input#messagedate(type="text", name="messagedate", value="#{user.messagedate}")
+        button(type= "submit") Update
+        a(href="/") home
